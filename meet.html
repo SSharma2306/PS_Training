@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting</title>
+
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href='external/normalize.css'>
+
+    <link rel="stylesheet" href="Fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/HamBur.css">
+
+    <link rel="stylesheet" href="css/meet.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/MeetFlexB.css">
+    <link rel="stylesheet" href="css/jquery-3.6.0.js">
+
+</head>
+
+<body>
+    <nav class="main-menu">
+        <ul class='list-unstyled list-inline container'>
+            <li><a href="cal.html">Calendar</a></li>
+            |
+            <li><a href="meet.html" class="active">Meetings</a></li>
+            |
+            <li><a href="teams.html">Teams</a></li>
+
+            <span class="RLinks">
+
+                <li><a href="hello.html">Hello!</a></li>
+                |
+                <li><a href="logout.html">Logout</a></li>
+            </span>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section>
+            <h1>Meeting</h1>
+            <hr>
+        </section>
+        <br>
+        <section>
+            <span id="FilAdd" class='active'>
+            <button id="FillAdd" onclick="showForm('SearchForm')">Filter/Search Meetings</button>
+            </span>
+            <span id="AddMeeting" class="active">
+                <button id="AddMeeting" onclick="showForm('AddForm')">Add a Meeting</button>
+            </span>
+        </section>
+        <br>
+        <section class="MeetSec">
+            <h2 class="MeetH2">Search for Meetings</h2>
+            <hr>
+
+            <br>
+            <form id="SearchForm" method="post" class="FormAdd">
+                <div class="forDate">
+                    <label for="date">Date</label>
+                    <div class="forDateOpt">
+                        <select id="date" name="date" class="input">
+                            <option value="">-- Select Date ---</option>
+                            <option value="all">ALL</option>
+                            <option value="past">PAST</option>
+                            <option value="today">TODAY</option>
+                            <option value="upcoming">UPCOMING</option>
+                        </select>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="forName">
+                    <label for="search">Search for</label>
+                    <div class="forSearch">
+                        <input type="text" id="search" name="search" aria-describedby="name-help" class="input"
+                            placeholder="Search Using the Words Which Describe the Meeting" />
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="forDate">
+                    <div class="action-buttons">
+                        <button type="submit" class="btn btn-primary">
+                            Search
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+<!--        
+            <form id="AddForm" method="post" class="FormAdd">
+                <div class="forDate">
+                    <label for="date">Date</label>
+                    <div class="forDateOpt">
+                        <select id="date" name="date" class="input">
+                            <option value="">-- Select Date ---</option>
+                            <option value="all">ALL</option>
+                            <option value="past">PAST</option>
+                            <option value="today">TODAY</option>
+                            <option value="upcoming">UPCOMING</option>
+                        </select>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="forName">
+                    <label for="search">Search for</label>
+                    <div class="forSearch">
+                        <input type="text" id="search" name="search" aria-describedby="name-help" class="input"
+                            placeholder="Search Using the Words Which Describe the Meeting" />
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="forDate">
+                    <div class="action-buttons">
+                        <button type="submit" class="btn btn-primary">
+                            Search
+                        </button>
+                    </div>
+                </div>
+            </form>
+-->
+        </section>
+
+        <section>
+            <h2>Meetings Matching the Search Criteria</h2>
+            <hr>
+        </section>
+
+        <section>
+            <div class="parent">
+                <div class="child">
+                    <h4>Customer Acquisiton Campaign</h4>
+                    <h5>@customer-acquisition</h5>
+
+                    <h5 class="FlexBH5">Team to Come Up with Strategies to Win</h5>
+
+                    <button type="submit" class="btn-meetFlexB btn-primary-meetFlexB">Excuse Yourself </button>
+
+                    <hr>
+
+                    <p><strong>Members</strong>: john@example.com, jane@example.com</p>
+
+                    <button type="submit" class="btn-meetFlexB btn-add-meetFlexB">Add</button>
+
+                </div>
+                <div class="child">
+                    <h4>Customer Acquisiton Campaign</h4>
+                    <h5>@customer-acquisition</h5>
+
+                    <h5 class="FlexBH5">Team to Come Up with Strategies to Win</h5>
+
+                    <button type="submit" class="btn-meetFlexB btn-primary-meetFlexB">Excuse Yourself </button>
+
+                    <hr>
+
+                    <p><strong>Members</strong>: john@example.com, jane@example.com</p>
+
+                    <button type="submit" class="btn-meetFlexB btn-add-meetFlexB">Add</button>
+                </div>
+        </section>
+
+    </main>
+
+    <script>
+        var showForm=function(id){
+            document.getElementById(id).style.display = '';
+        }
+
+        $("#FillAdd").click(function(){
+            $('#SearchForm').toggle();
+        })
+    </script>
+</body>
+
+</html>
