@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Workshops of technical background happening nearby.">
+    <title>Calendar</title>
+
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href='external/normalize.css'>
+
+    <link rel="stylesheet" href="css/CalFlexB.css">
+
+    <link rel="stylesheet" href="Fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/HamBur.css">
+
+</head>
+
+<body>
+    <nav class="main-menu">
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+        <ul class='list-unstyled list-inline container'>
+            <li><a href="cal.html" class="active">Calendar</a></li>
+            |
+            <li><a href="meet.html">Meetings</a></li>
+            |
+            <li><a href="teams.html">Teams</a></li>
+
+            <span class="RLinks">
+
+                <li><a href="hello.html">Hello!</a></li>
+                |
+                <li><a href="logout.html">Logout</a></li>
+            </span>
+        </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section>
+            <h1>Calendar</h1>
+            <hr>
+            <h2>Date</h2>
+            <h3>Day</h3>
+        </section>
+        <div class="parent">
+            <ol>
+                <li><div class="child"></div></li>
+                <li><div class="child"></div></li>
+                <li><div class="child"></div></li>
+                <li><div class="child"></div></li>
+                <li><div class="child"></div></li>
+                <li><div class="child"></div></li>
+                <li><div class="child"></div></li>
+                <li><div class="child"></div></li>
+                <li><div class="child"></div></li>
+                <li><div class="child"></div></li>
+                <li><div class="child"></div></li>
+                <li><div class="child"></div></li>
+                <li><div class="child"></div></li>
+                <li><div class="child"></div></li>
+                <li><div class="child"></div></li>
+                <li><div class="child"></div></li>
+                <li><div class="child"></div></li>
+            </ol>
+        </div>
+    </main>
+
+    <script>
+        const toggleButton = document.getElementsByClassName('toggle-button')[0]
+        const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+        toggleButton.addEventListener('click', () => {
+            navbarLinks.classList.toggle(active)
+        })
+    </script>
+
+</body>
+
+</html>
